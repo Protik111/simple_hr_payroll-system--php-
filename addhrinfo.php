@@ -23,8 +23,16 @@
 			<input type="text" name="phone" value="">
 		</div>
 		<div class="input-group">
-			<button class="btn" type="submit" name="add" >Add</button>
+			<button class="btn" type="submit" name="add" >Add Employee</button>
 		</div>
 	</form>
+	
+	<?php
+     alert("Empolyee added to database");
+
+     function alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+    }
+    ?>
 </body>
 </html>
