@@ -21,65 +21,56 @@ if(isset($_POST['submit_button'])){
 <html>
     <head>
         <title>Sign Up for HR(Admin)</title>
+        <link rel="stylesheet" href="style.css">
      
     </head>
     <body>
-        <form method="post" action="signup.php">
-            <h2 >Sign Up HR Only</h2>
-            <table class="">
-                <tr>    
-                    <td>Enter Name</td>
-                    <td><input type="text" name="fullname" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Enter Email</td>
-                    <td><input type="email" name="email" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Enter Address</td>
-                    <td><input type="text" name="address" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Enter Phone</td>
-                    <td><input type="tel" name="phone" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Enter Password</td>
-                    <td><input type="password" name="password" required></td>
-                    
-                </tr>
-                <tr>   
-                    <td><input type="submit" name="submit_button" value="Sign Up"></td>
-                    
-                </tr>
-
-            </table>
-        </form>
+    <form method="post" action="signup.php" >
+    <h2 >Sign Up HR Only</h2>
+		<div class="input-group">
+			<label>Name</label>
+			<input type="text" name="fullname" value="">
+		</div>
+		<div class="input-group">
+			<label>Email</label>
+			<input type="text" name="email" value="">
+        </div>
+        <div class="input-group">
+			<label>Address</label>
+			<input type="text" name="address" value="">
+        </div>
+        <div class="input-group">
+			<label>Phone</label>
+			<input type="text" name="phone" value="">
+        </div>
+        <div class="input-group">
+			<label>Password</label>
+			<input type="password" name="password" value="">
+		</div>
+		<div class="input-group">
+			<button class="btn" type="submit" name="submit_button" >Sign Up</button>
+		</div>
+	</form>
 
         <!-- //user sign in form -->
 
-        <form method="post" action="signup.php">
-            <table class="user-sign-in">
-            <h2>Sign In for User</h2>
-                <tr>    
-                    <td>Enter Email</td>
-                    <td><input type="email" name="email" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Enter Password</td>
-                    <td><input type="password" name="password" required></td>
-                    
-                </tr>
-                <tr>   
-                    <td><input type="submit" name="submit_button" value="Sign In"></td>
-                    
-                </tr>
-            </table>
-        </form>
+        <form method="post" action="login.php" >
+        <div>
+        <h1>Sign In For Employee</h1>
+        </div>
+		<div class="input-group">
+			<label>Email</label>
+			<input type="text" name="email" value="">
+        </div>
+       
+        <div class="input-group">
+			<label>Password</label>
+			<input type="password" name="password" value="">
+        </div>
+        
+		<div class="input-group">
+			<button class="btn" type="submit" name="submit_btn" >Sign In</button>
+		</div>
+	</form>
     </body>
 </html>

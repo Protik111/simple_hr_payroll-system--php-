@@ -1,6 +1,6 @@
 <?php
 $db = mysqli_connect("localhost", "root", "", "payroll2");
-if(isset($_POST['submit'])){
+if(isset($_POST['submit_btn'])){
     session_start();
     $email = $_POST['email'];
     $password = md5($_POST['password']);
@@ -21,27 +21,27 @@ if(isset($_POST['submit'])){
 <html>
     <head>
         <title>Authentication Module</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+       
+        <form method="post" action="login.php" >
+        <div class="login">
         <h1>Login</h1>
-        <form method="post" action="login.php">
-            <table>
-             
-                <tr>    
-                    <td>Email</td>
-                    <td><input type="email" name="email" required></td>
-                    
-                </tr>
-                <tr>    
-                    <td>Password</td>
-                    <td><input type="password" name="password" required></td>
-                    
-                </tr>
-                <tr>   
-                    <td><input type="submit" name="submit" value="Login"></td>
-                    
-                </tr>
-            </table>
-        </form>
+        </div>
+		<div class="input-group">
+			<label>Email</label>
+			<input type="text" name="email" value="">
+        </div>
+       
+        <div class="input-group">
+			<label>Password</label>
+			<input type="password" name="password" value="">
+        </div>
+        
+		<div class="input-group">
+			<button class="btn" type="submit" name="submit_btn" >Sign In</button>
+		</div>
+	</form>
     </body>
 </html>

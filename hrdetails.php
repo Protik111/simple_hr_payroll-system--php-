@@ -10,6 +10,7 @@ $result=mysqli_query($db,$query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showing Data of HR</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <table align="center" border="1px" style="width:600px; line-height:40px;">
@@ -23,6 +24,7 @@ $result=mysqli_query($db,$query);
     <th>Address</th>
     <th>Phone</th>
     </t>
+    
     <?php
     while($rows=mysqli_fetch_assoc($result))
     {
@@ -39,5 +41,7 @@ $result=mysqli_query($db,$query);
     }
     ?>
     </table>
+   
+    <p><a href='addhrinfo.php'>Click To Update/Delete</a></p>
 </body>
 </html>
